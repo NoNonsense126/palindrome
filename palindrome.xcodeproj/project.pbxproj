@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		81B9CF0D1C46CA8200C12090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B9CF0C1C46CA8200C12090 /* main.m */; };
 		81B9CF101C46CA8200C12090 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B9CF0F1C46CA8200C12090 /* AppDelegate.m */; };
-		81B9CF131C46CA8200C12090 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B9CF121C46CA8200C12090 /* ViewController.m */; };
 		81B9CF161C46CA8200C12090 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81B9CF141C46CA8200C12090 /* Main.storyboard */; };
 		81B9CF181C46CA8200C12090 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81B9CF171C46CA8200C12090 /* Assets.xcassets */; };
 		81B9CF1B1C46CA8200C12090 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81B9CF191C46CA8200C12090 /* LaunchScreen.storyboard */; };
+		81B9CF241C46CA9D00C12090 /* PalindromeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B9CF231C46CA9D00C12090 /* PalindromeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +20,12 @@
 		81B9CF0C1C46CA8200C12090 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		81B9CF0E1C46CA8200C12090 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		81B9CF0F1C46CA8200C12090 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		81B9CF111C46CA8200C12090 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		81B9CF121C46CA8200C12090 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		81B9CF151C46CA8200C12090 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		81B9CF171C46CA8200C12090 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81B9CF1A1C46CA8200C12090 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81B9CF1C1C46CA8200C12090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81B9CF221C46CA9D00C12090 /* PalindromeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PalindromeViewController.h; path = ../PalindromeViewController.h; sourceTree = "<group>"; };
+		81B9CF231C46CA9D00C12090 /* PalindromeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PalindromeViewController.m; path = ../PalindromeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +58,9 @@
 		81B9CF0A1C46CA8200C12090 /* palindrome */ = {
 			isa = PBXGroup;
 			children = (
-				81B9CF0E1C46CA8200C12090 /* AppDelegate.h */,
-				81B9CF0F1C46CA8200C12090 /* AppDelegate.m */,
-				81B9CF111C46CA8200C12090 /* ViewController.h */,
-				81B9CF121C46CA8200C12090 /* ViewController.m */,
 				81B9CF141C46CA8200C12090 /* Main.storyboard */,
+				81B9CF221C46CA9D00C12090 /* PalindromeViewController.h */,
+				81B9CF231C46CA9D00C12090 /* PalindromeViewController.m */,
 				81B9CF171C46CA8200C12090 /* Assets.xcassets */,
 				81B9CF191C46CA8200C12090 /* LaunchScreen.storyboard */,
 				81B9CF1C1C46CA8200C12090 /* Info.plist */,
@@ -74,6 +72,8 @@
 		81B9CF0B1C46CA8200C12090 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				81B9CF0E1C46CA8200C12090 /* AppDelegate.h */,
+				81B9CF0F1C46CA8200C12090 /* AppDelegate.m */,
 				81B9CF0C1C46CA8200C12090 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -149,7 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81B9CF131C46CA8200C12090 /* ViewController.m in Sources */,
+				81B9CF241C46CA9D00C12090 /* PalindromeViewController.m in Sources */,
 				81B9CF101C46CA8200C12090 /* AppDelegate.m in Sources */,
 				81B9CF0D1C46CA8200C12090 /* main.m in Sources */,
 			);

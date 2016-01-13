@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Palindrome View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="PalindromeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,78 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="type in your test string" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zkk-bf-Bqn">
+                                <rect key="frame" x="0.0" y="285" width="600" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="Zjm-qQ-iNd"/>
+                                    <constraint firstAttribute="height" constant="30" id="fKM-oe-GtG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0d-Bk-9EG">
+                                <rect key="frame" x="278" y="434" width="44" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="RPY-FF-ff4"/>
+                                    <constraint firstAttribute="height" constant="30" id="mLx-Fw-1VY"/>
+                                </constraints>
+                                <state key="normal" title="Check"/>
+                                <connections>
+                                    <action selector="checkPalindrome:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sdD-v2-1GN"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZq-IT-Pre">
+                                <rect key="frame" x="279" y="124" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="I8r-wt-WSg"/>
+                                    <constraint firstAttribute="width" constant="42" id="RUu-Cy-Rar"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCE-GL-NVr">
+                                <rect key="frame" x="32" y="364" width="536" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6y-pd-5Xg">
+                                <rect key="frame" x="241" y="495" width="118" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="118" id="BwF-lA-7fU"/>
+                                    <constraint firstAttribute="height" constant="30" id="J9d-S1-C2f"/>
+                                </constraints>
+                                <state key="normal" title="Make Palindrome"/>
+                                <connections>
+                                    <action selector="makePalindrome:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uiY-v6-ym8"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HZq-IT-Pre" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6fu-Jo-Gtd"/>
+                            <constraint firstItem="HZq-IT-Pre" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="104" id="Fo2-Rl-9or"/>
+                            <constraint firstItem="l0d-Bk-9EG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kay-Or-IM2"/>
+                            <constraint firstItem="oCE-GL-NVr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="12" id="Kgh-2L-5iR"/>
+                            <constraint firstItem="oCE-GL-NVr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mr7-Fc-Ztv"/>
+                            <constraint firstItem="u6y-pd-5Xg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VZ1-rT-O4Y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oCE-GL-NVr" secondAttribute="trailing" constant="12" id="Yz1-W5-hsZ"/>
+                            <constraint firstItem="u6y-pd-5Xg" firstAttribute="top" secondItem="l0d-Bk-9EG" secondAttribute="bottom" constant="31" id="abq-kX-YTN"/>
+                            <constraint firstItem="zkk-bf-Bqn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nUy-kF-WWh"/>
+                            <constraint firstItem="zkk-bf-Bqn" firstAttribute="top" secondItem="HZq-IT-Pre" secondAttribute="bottom" constant="140" id="wtw-ZP-9PX"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="HZq-IT-Pre" id="TqY-FU-fgM"/>
+                        <outlet property="resultLabel" destination="oCE-GL-NVr" id="2Ca-cc-nSn"/>
+                        <outlet property="textField" destination="zkk-bf-Bqn" id="cCM-nV-SmB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="245" y="305"/>
         </scene>
     </scenes>
 </document>
